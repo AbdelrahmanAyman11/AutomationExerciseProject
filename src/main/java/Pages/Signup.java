@@ -5,7 +5,12 @@ import org.openqa.selenium.WebDriver;
 
 public class Signup {
     private WebDriver driver;
-By Name = By.name("name");
+
+    public Signup(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    By Name = By.name("name");
 By Email= By.name("email");
 By SignUpButton=By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button");
 
