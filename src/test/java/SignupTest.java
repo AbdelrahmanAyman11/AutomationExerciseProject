@@ -27,7 +27,7 @@ Signup signupObj;
             System.out.println("Header is Displayed !!");
         }
     signupObj.entername("Abdo");
-    signupObj.enteremail("noogafy567+1@gmail.com");
+    signupObj.enteremail("noogafy567@gmail.com");
     signupObj.clicksignupbutton();
 //    signupObj.gender();
         signupObj.enterPassword("123456aa");

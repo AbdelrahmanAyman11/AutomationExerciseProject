@@ -10,10 +10,17 @@ public class Login {
     public Login(WebDriver driver) {
         this.driver = driver;
     }
-
     By Email = By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]");
     By Password =By.xpath("/html/body/section/div/div/div[1]/div/form/input[3]");
     By LoginButton = By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button");
+    By deleteAccButton =By.xpath("/html/body/header/div/div/div/div[2]/div/ul/li[5]/a");
+    By deletedMessage =By.xpath("/html/body/section/div/div/div/h2/b");
+    By ContinueButtton =By.xpath("/html/body/section/div/div/div/div/a");
+    By IncorrectMessage =By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/p");
+
+
+
+
 
     public void enterEmail(String email)
     {
@@ -28,5 +35,23 @@ public class Login {
     public void ClickLogin()
     {
         driver.findElement(LoginButton).submit();
+    }
+
+
+    public  void  ClickDelete()
+    {
+        driver.findElement(deleteAccButton).click();
+    }
+    public  String  visbilityOFDeletedMessage ()
+    {
+        return driver.findElement(deletedMessage).getText();
+    }
+    public  String  visbilityOFIncorrectMessage()
+    {
+        return driver.findElement(IncorrectMessage).getText();
+    }
+    public  void  ClickContinueButton()
+    {
+        driver.findElement(ContinueButtton).click();
     }
 }
